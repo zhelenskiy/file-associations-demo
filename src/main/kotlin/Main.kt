@@ -26,9 +26,14 @@ fun App() {
     }
 }
 
-fun main() {
-    Desktop.getDesktop().setOpenFileHandler { event ->
-        JOptionPane.showMessageDialog(null, event.files.map { it.path })
+fun main(args: Array<String>) {
+    if (args.isNotEmpty()) {
+        JOptionPane.showMessageDialog(null, args)
+    }
+    if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.APP_OPEN_FILE)) {
+        Desktop.getDesktop().setOpenFileHandler { event ->
+            JOptionPane.showMessageDialog(null, event.files.map { it.path })
+        }
     }
     application {
         Window(onCloseRequest = ::exitApplication) {
