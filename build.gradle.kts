@@ -32,8 +32,36 @@ compose.desktop {
 
             packageName = "file-associations-demo"
             packageVersion = "1.0.0"
-            
-            fileAssociation("text/kotlin", "kt", "Kotlin Source File")
+
+            macOS.fileAssociation(
+                mimeType = "text/kotlin",
+                extension = "kott",
+                description = "Kotlin Source File",
+                iconFile = project.file("Kotlin_icon_big.icns"),
+            )
+
+            windows.fileAssociation(
+                mimeType = "text/kotlin",
+                extension = "kott",
+                description = "Kotlin Source File",
+                iconFile = project.file("Kotlin_icon_big.icns"),
+            )
+
+            linux.fileAssociation(
+                mimeType = "text/kotlin",
+                extension = "kott",
+                description = "Kotlin Source File",
+                iconFile = project.file("Kotlin_icon_big.png"),
+            )
+
+            fileAssociation(
+                mimeType = "text/kotlin",
+                extension = "kot",
+                description = "Kotlin Source File",
+                macOSIcon = project.file("Kotlin_icon_big.icns"),
+                windowsIcon = project.file("Kotlin_icon_big.ico"),
+                linuxIcon = project.file("Kotlin_icon_big.png"),
+            )
         }
     }
 }
