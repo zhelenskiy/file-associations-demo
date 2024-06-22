@@ -36,31 +36,37 @@ compose.desktop {
             macOS.fileAssociation(
                 mimeType = "text/kotlin",
                 extension = "kott",
-                description = "Kotlin Source File",
+                description = "Kotlin Source File0",
                 iconFile = project.file("Kotlin_icon_big.icns"),
             )
 
             windows.fileAssociation(
                 mimeType = "text/kotlin",
                 extension = "kott",
-                description = "Kotlin Source File",
-                iconFile = project.file("Kotlin_icon_big.icns"),
+                description = "Kotlin Source File0",
+                iconFile = project.file("Kotlin_icon_big.ico"),
             )
 
             linux.fileAssociation(
                 mimeType = "text/kotlin",
                 extension = "kott",
-                description = "Kotlin Source File",
+                description = "Kotlin Source File0",
                 iconFile = project.file("Kotlin_icon_big.png"),
             )
 
             fileAssociation(
                 mimeType = "text/kotlin",
                 extension = "kot",
-                description = "Kotlin Source File",
-                macOSIcon = project.file("Kotlin_icon_big.icns"),
-                windowsIcon = project.file("Kotlin_icon_big.ico"),
-                linuxIcon = project.file("Kotlin_icon_big.png"),
+                description = "Kotlin Source File1",
+                macOSIconFile = project.file("Kotlin_icon_big.icns"),
+                windowsIconFile = project.file("Kotlin_icon_big.ico"),
+                linuxIconFile = project.file("Kotlin_icon_big.png"),
+            )
+
+            fileAssociation(
+                mimeType = "text/kotlin",
+                extension = "kottt",
+                description = "Kotlin Source File2",
             )
         }
     }
